@@ -69,14 +69,12 @@ function saveDataToLocalStorage() {
     populateBoxDropdown();
   });
   
-  // Sample data structure without JSON
   let boxes = [
     { boxId: 1, boxName: 'Box 1', items: ['Item 1', 'Item 2'] },
     { boxId: 2, boxName: 'Box 2', items: ['Item A', 'Item B'] },
-    // Add more boxes as needed
   ];
   
-  // Function to search within all boxes
+  // Function to search 
   function search(query) {
     query = query.toLowerCase();
   
