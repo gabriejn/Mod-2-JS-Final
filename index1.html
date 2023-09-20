@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Organizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Box Organizer</h1>
+
+    <!-- Checkboxes for adding boxes or items -->
+    <label class="checkbox-label">
+      <input type="checkbox" id="addBoxCheckbox" checked> Add Box
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="addItemCheckbox"> Add Item
+    </label>
+
+    <!-- Input for box name (only visible when adding a box) -->
+    <input type="text" id="boxNameInput" placeholder="Box Name" style="display: none;">
+
+    <!-- Input for item name (only visible when adding an item) -->
+    <input type="text" id="itemNameInput" placeholder="Item Name" style="display: none;">
+
+    <!-- Dropdown for selecting the box to add items -->
+    <select id="selectBoxToAdd">
+      <option value="" disabled selected>Select Box</option>
+      <!-- Populate this dropdown with box names dynamically using JavaScript -->
+    </select>
+
+    <!-- Buttons for adding boxes/items and searching -->
+    <button id="addButton">Add</button>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button id="searchButton">Search</button>
+
+    <!-- Display selected box contents here (hidden by default) -->
+    <div id="boxContents" style="display: none;"></div>
+
+    <!-- Popup for no results -->
+    <div class="popup" id="noResultsPopup">
+      <p>No results found for your search.</p>
+      <button id="closePopupButton">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
