@@ -10,6 +10,7 @@ function saveDataToLocalStorage() {
       boxes = JSON.parse(storedData);
     }
   }
+    alert("To start add a new box or select a box and 'Add Item' to use one already created!");
   
   // Function to populate the dropdown with box names
   function populateBoxDropdown() {
@@ -142,6 +143,12 @@ function saveDataToLocalStorage() {
       addItem();
     }
   });
+  itemNameInput.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      addItem();
+    }
+  });
+  
   
   function addItem() {
     const addBoxCheckbox = document.getElementById('addBoxCheckbox');
@@ -228,5 +235,5 @@ searchInput.addEventListener('input', () => {
       displayResults([]);
     }
   }
-  
+
   
