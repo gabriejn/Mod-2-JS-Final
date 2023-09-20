@@ -8,6 +8,7 @@ body {
   
   .container {
     max-width: 800px;
+    height: 50vh;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -16,7 +17,8 @@ body {
   }
   
   h1 {
-    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
     margin-bottom: 20px;
   }
   
@@ -82,9 +84,5 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-  
-  /* Highlighted search term */
-  .highlight {
-    background-color: yellow;
-  }
+
   

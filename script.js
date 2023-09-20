@@ -8,7 +8,6 @@ function saveDataToLocalStorage() {
     const storedData = localStorage.getItem('boxesData');
     if (storedData) {
       boxes = JSON.parse(storedData);
-      // Update your UI or do any necessary processing
     }
   }
   
@@ -25,7 +24,7 @@ function saveDataToLocalStorage() {
     }
   }
   
-  // Function to update the display based on search results
+  // Search results
   function displayResults(searchResults) {
     const boxContents = document.getElementById('boxContents');
     boxContents.innerHTML = '';
@@ -178,9 +177,7 @@ function saveDataToLocalStorage() {
           itemNameInput.value = ''; // Clear the input
           displayBoxContents(selectedBoxId); // Show contents of the selected box
           alert(`Item "${itemName}" added to "${selectedBox.boxName}" successfully!`);
-        } else {
-          alert('Box not found. Please select a valid box.');
-        }
+        } 
       } else {
         alert('Please enter an item name and select a box.');
       }
@@ -214,19 +211,12 @@ function saveDataToLocalStorage() {
     }
   });
   
-  // Event listener for the search button
-  const searchButton = document.getElementById('searchButton');
-  
-  searchButton.addEventListener('click', () => {
+
+// Event listener for the search input
+searchInput.addEventListener('input', () => {
     searchItems();
   });
   
-  // Event listener for the Enter key in the search input
-  searchInput.addEventListener('keyup', (event) => {
-    if (event.key === 'Enter') {
-      searchItems();
-    }
-  });
   
   function searchItems() {
     const query = searchInput.value.trim();
@@ -235,7 +225,8 @@ function saveDataToLocalStorage() {
       const searchResults = search(query);
       displayResults(searchResults);
     } else {
-      alert('Please enter a search query.');
+      displayResults([]);
     }
   }
+  
   
